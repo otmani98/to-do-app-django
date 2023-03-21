@@ -26,7 +26,7 @@ then run the server
 
 `python3 manage.py runserver`
 
-then you go to browser and go to localhost
+then go to browser and of course go to localhost
 
 http://127.0.0.1:8000/
 
