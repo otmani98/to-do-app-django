@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'main_app/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To Do list</h1>
+        <section>
+            
+            <form action="/" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{field}}
+                    {{field.errors}}
+                {% endfor %} 
+                <button>Add</button>
+            </form>
+            <div class="list">
+                {% if status %}
+                <ul>
+                    {% for index, item in sessions %}
+                        <li><p>{{item}}</p>
+                            <form action="delete" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" name="index" value="{{index}}">
+                                <button>Delete</button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    <form action="delete_all" method="POST">
+                        {% csrf_token %}
+                        <button>Clear All</button>
+                    </form>
+                {% else %}
+                <p class="no-item">There is  no Item</p>
+                {% endif %}
+            </div>
+        </section>
+    </div>
+</body>
+</html>

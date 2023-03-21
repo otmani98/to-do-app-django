@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EEE;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+ul {
+    list-style: none;
+} 
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 80px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+}
+p {
+    display: inline-block;
+}
+section {
+    background-color: white;
+    padding: 60px;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 25px;
+    height: auto;
+    text-align: center;
+    box-shadow: 4px 18px 50px 5px rgba(0,0,0,0.1);
+}
+
+section .list ul li {
+    margin: 10px;
+    border-bottom: 1px solid #EEE;
+    padding: 15px;
+    font-size: 25px;
+}
+
+section .list ul li form {
+    display: inline-block;
+}
+
+section  button {
+    background-color: #4b57e4;
+    color: white;
+    border: 1px solid #4b57e4;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+section  button:hover {
+    background-color: #2631a7;
+}
+
+input[type="text"] {
+    border: 1px solid #DDD;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 70%;
+    font-size: 23px;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #2631a7;
+    outline: none;
+}
+
+.no-item {
+    font-size: 25px;
+    color: #2631a7;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 769px) {
+    h1 {
+        font-size: 50px;
+    }
+    section {
+        padding: 30px 10px;
+    }
+    input[type="text"] {
+        margin-bottom: 0;
+    }
+    p {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
